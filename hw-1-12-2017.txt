@@ -12,4 +12,8 @@ Answers to Exercises
 #ls Reading Comprehension
 4. Either #2 or #3 above, but not #1
 
+#Exploring More ls Arguments
+ls -l lists the details of the files including file sizes
+ls -h lists the file sizes in human readable format
+
 
