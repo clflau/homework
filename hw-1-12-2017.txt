@@ -16,4 +16,7 @@ Answers to Exercises
 ls -l lists the details of the files including file sizes
 ls -h lists the file sizes in human readable format
 
+#Listing Recursively and By Time
+Directory listed by alphabetical order, subdirectories and files listed by time of last chage
+
 
