@@ -9,4 +9,7 @@ Answers to Exercises
 #Relative Path Resolution
 4. original pnas_final pnas_sub
 
+#ls Reading Comprehension
+4. Either #2 or #3 above, but not #1
+
 
