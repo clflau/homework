@@ -68,4 +68,17 @@ highest numreads? This one took me a while to figure out...
 >contig00302,length=1014,numreads=3330
 
 Question 7
+  735  for filename in *.txt; do echo $filename edited-$filename ; cp $filename ../../sandbox/temp/edited-$filename ; done
+  736  history 2 >> ~/Desktop/eeb-177/homework/week-2-hw-eeb174.txt 
 
+Question 8
+#Using grep
+Ans: 3. grep -w "of" haiku.txt
+#find Pipeline Reading Comprehension
+Ans: Find within working directory all files with extension ".dat", count and sort by the number of lines in these files
+#Matching and Subtracting
+Ans: 3. grep -v "temp" $(find /data -name '*ose.dat')
+#Tracking a Species
+Ans: ????????????????????????????????????
+#Little Women
+Ans: for sisters in LittleWomen.txt; do grep $sisters ???????????????????
