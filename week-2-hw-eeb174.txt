@@ -1,0 +1,71 @@
+Homework file
+
+
+Question 1
+Rodentia
+Rodentia
+Rodentia
+Macroscelidea
+Rodentia
+
+Question 2
+There are 1425 unique families
+
+Question 3
+  559  sort -k 2 Pacifici2013_data.csv 
+  560  sort -k 3 Pacifici2013_data.csv | wc -l
+  561  sort -k 3 Pacifici2013_data.csv | uniq | wc -l
+  562  sort -k 3 Pacifici2013_data.csv | cut -d ";" -f 3 | wc -l
+  563  sort -k 3 Pacifici2013_data.csv | cut -d ";" -f 3 | uniq | wc -l
+  564  echo "There are 1425 unique families" >> ~/Desktop/eeb-177/homework/
+  565  echo "There are 1425 unique families" >> ~/Desktop/eeb-177/homework/week-2-hw-eeb174.txt 
+  566  echo "Question 3" >> ~/Desktop/eeb-177/homework/week-2-hw-eeb174.txt 
+  567  echo "aaaabbb" | tr "a" "b"
+  568  echo "aaaabbb" | tr 1-5 0
+  569  echo "123456789" | tr 1-5 0
+  570  echo "ACtGGcAaTT" | tr actg ACTG
+  571  echo "ACtGGcAaTT" | tr [:lower:] [:upper:]
+  572  echo "aabbccddee" | tr a-c 1-3
+  573  echo "aaaaabbbb" | tr -d a
+  574  echo "aaaaabbbb" | tr -s a
+  575  cd ../sandbox/
+  576  tail -n +2 ../data/Pacifici2013_data.csv 
+  577  tail -n +2 ../data/Pacifici2013_data.csv |cut -d ";" -f 2-6 | tr -s ";" " " | sort -n -r -k 6 > BodyM.csv
+  578  history 20 >> ~/Desktop/eeb-177/homework/week-2-hw-eeb174.txt 
+
+Question 4
+10th largest: Eubalaena glacialis
+10th smallest: Pipistrellus nanulus
+
+Question 5
+  604  tail -n +2 Pacifici2013_data.csv | cut -d ";" -f 5-6 | tr -s ";" " " | sort -r -n -k 2 | head -n 10
+  605  tail -n +2 Pacifici2013_data.csv | cut -d ";" -f 2-6 | tr -s ";" " " | sort -r -n -k 6 | head -n 10
+  606  echo "Eubalaena glacialis" >> ~/Desktop/eeb-177/homework/week-2-hw-eeb174.txt 
+  607  tail -n +2 Pacifici2013_data.csv | cut -d ";" -f 2-6 | tr -s ";" " " | sort -n -k 6 | head -n 10
+  608  echo "10th smallest: Pipistrellus nanulus" >> ~/Desktop/eeb-177/homework/week-2-hw-eeb174.txt 
+  609  cd ../sandbox/
+  610  wc -l BodyM.csv 
+  611  grep Vomatidae BodyM.csv 
+  612  grep Vombatidae BodyM.csv
+  613  grep -c Vombatidae BodyM.csv 
+  614  grep Bos BodyM.csv 
+  615  grep -w Bos BodyM.csv 
+  616  grep -i Bos BodyM.csv 
+  617  grep -B 2 -A 2 "Gorilla gorilla" BodyM.csv 
+  618  grep -n "Gorilla gorilla" BodyM.csv 
+  619  grep Gorilla BodyM.csv | grep -v gorilla
+  620  grep -w "Gorilla\|Pan" BodyM.csv 
+  621  cd ..
+  622  grep -r "Gorilla" data/
+  623  history 20 >> ~/Desktop/eeb-177/homework/week-2-hw-eeb174.txt 
+
+
+Question 6
+How big is file? 553K
+How many contigs? 16
+Unique isogroups? 43
+highest numreads? This one took me a while to figure out...
+>contig00302,length=1014,numreads=3330
+
+Question 7
+
