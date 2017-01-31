@@ -40,6 +40,7 @@ while read ID
 		echo "time(s)"
 done < list_of_IDs.txt
 
+#output looks like this:
 Individual 1 has been sampled 10
 time(s)
 Individual 2 has been sampled 2
@@ -294,4 +295,40 @@ time(s)
 ---
 
 1.11.3:
+1. Write a script that takes one of these files and determines the number of rows (pollinators) and columns(plants). 
+#!bin/bash
 
+#This script takes one argument $1 txt file name
+#Print out filename
+#replace all spaces into semicolons
+#
+#Print out number of rows
+#Print out number of columns
+
+echo "Filename: $1"
+row=$(tail -n +1 $1 | wc -l)
+echo "Number of rows: $row" 
+col=$(head -n 1 $1 | wc -w)
+echo "Number of columns: $col"
+
+---
+
+2. Write a script that prints the number of rows and columns for each network
+#!/bin/bash
+
+#This script is similar to netsize.sh, but it prints number of rows and columns for each network file in current directory
+#Procedure:
+#For loop, print network file name
+#number of rows
+#number of cols
+
+for filename in *.txt
+	do 
+		row=$(tail -n +1 $filename | wc -l)
+		col=$(head -n 1 $filename | wc -w)
+		echo "$filename $row $col"
+done
+
+3. Which file has the largest number of rows? Which the largest number of columns?
+Largest number of rows: n58.txt, 678 rows
+Largest number of columns: n56.txt 207 cols
