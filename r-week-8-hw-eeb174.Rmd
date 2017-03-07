@@ -53,8 +53,59 @@ nrow(canids[!duplicated(canids$genus), ])
 Q: What species has the longest range
 A: Cormocyon copei
 ```{r}
-canids[which((canids$maxage - canids$minage) == max(canids$maxage - canids$minage)), 2]
+canids[which(
+  (canids$maxage - canids$minage) == max(canids$maxage - canids$minage)), 2
+  ]
 ```
+
+## Redo this exercise with another taxon
+### Taxon: Equidae
+
+```{r}
+Equids <- read.csv("Equid_range.csv", header = F, as.is = T)
+
+names(Equids) <- c("genus", "species", "minage", "maxage")
+head(Equids)
+
+Equid_occ <- ggplot(Equids, aes(species, ymin = maxage, 
+                                ymax=minage, colour = genus)) + 
+  geom_linerange() +
+  theme(legend.position="none", axis.text.y = element_text(size = 3),
+        axis.ticks.y = element_blank(), plot.title = element_text(hjust = 0.5,
+                                                                size=22, 
+                                                                face = "bold"),
+        axis.title =element_text(size=20)) +
+  coord_flip() +
+  scale_y_continuous(limits=c(0, 40), 
+                     expand = c(0, 0), breaks=c(0, 10, 20, 30, 40)) +
+  labs(title = "Equidae Fossil Occurrences", x = "Species", y = "Ma ago")
+  
+Equid_occ
+
+ggsave(filename = "Equid-occ.pdf", plot = Equid_occ)
+```
+Q: What taxonomic group is displayed?
+A: Equidae
+
+Q: How many unique fossil species are contained within it?
+A: 219
+```{r}
+length(Equids$species)
+```
+
+Q: How many unique fossil genera?
+A: 43
+```{r}
+nrow(Equids[!duplicated(Equids$genus), ])
+```
+Q: What species has the longest range
+A: Eurohippus parvulus
+```{r}
+Equids[which(
+  (Equids$maxage - Equids$minage) == max(Equids$maxage - Equids$minage)), 2
+  ]
+```
+
 
 
 # Part 2: Data Frames
